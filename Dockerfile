@@ -26,3 +26,6 @@ RUN apk add libffi-dev openssl-dev python3-dev
 # RUN apk add linux-headers
 
 WORKDIR /root
+COPY cloudcenter_deploy.py ./
+
+

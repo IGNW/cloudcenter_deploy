@@ -1,0 +1,76 @@
+{
+        "appId": 29,
+        "appVersion": "1.0",
+        "name": "ads",
+        "metadata": [
+                {
+                        "id": 7,
+                        "namespace": "",
+                        "tagName": "Name",
+                        "tagCollectionId": 7,
+                        "value": "%JOB_NAME%",
+                        "required": true,
+                        "editable": false,
+                        "name": "Name"
+                }
+        ],
+        "environmentId": "4",
+        "tagIds": [],
+        "securityProfileIds": null,
+        "agingPolicyId": "",
+        "suspensionPolicyId": "",
+        "policyIds": null,
+        "preventTermination": false,
+        "parameters": {
+                "appParams": [],
+                "cloudParams": {
+                        "cloudRegionId": "7",
+                        "accountId": "5"
+                }
+        },
+        "jobs": [
+                {
+                        "tierId": "30",
+                        "policyIds": null,
+                        "tagIds": [],
+                        "securityProfileIds": null,
+                        "parameters": {
+                                "appParams": [
+                                        {
+                                                "name": "referredJob",
+                                                "value": ""
+                                        }
+                                ],
+                                "envParams": [],
+                                "cloudParams": {
+                                        "cloudRegionId": "7",
+                                        "accountId": "5",
+                                        "volumes": [],
+                                        "rootVolumeSize": "0",
+                                        "cloudProperties": [
+                                                {
+                                                        "name": "namespace",
+                                                        "value": "default"
+                                                }
+                                        ],
+                                        "nics": []
+                                }
+                        },
+                        "appServices": [
+                                {
+                                        "appServiceId": "1",
+                                        "parameters": {
+                                                "appParams": [],
+                                                "cloudParams": {
+                                                        "instance": "default",
+                                                        "containerVolumes": []
+                                                }
+                                        }
+                                }
+                        ],
+                        "numNodesToLaunch": 1
+                }
+        ],
+        "timeZone": "GMT-07:00",
+        "responseJobJaxbNotRequired": true
+}
