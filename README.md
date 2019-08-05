@@ -1,3 +1,5 @@
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/IGNW/cloudcenter_deploy)
+
 # cloudcenter_deploy
 This scipt will deploy a Cisco Cloud Center Application Profile with your choice of name.  
 
