@@ -1,6 +1,6 @@
-FROM node:6.11-alpine
+FROM python:3.7.4-alpine
 
-MAINTAINER Tige Phillips <tige@ignw.io>
+LABEL Tige Phillips <tige@ignw.io>
 
 
 # PYTHON and TOOLS
@@ -16,7 +16,8 @@ RUN apk add --no-cache python3 && \
 
 RUN apk add --no-cache bash
 RUN pip3 install --upgrade pip
-RUN pip3 install requests openpyxl setuptools
+COPY requirements.txt ./
+RUN pip3 install -r requirements.txt 
 
 RUN apk add libffi-dev openssl-dev python3-dev
 # RUN apk add gcc
@@ -27,5 +28,8 @@ RUN apk add libffi-dev openssl-dev python3-dev
 
 WORKDIR /root
 COPY cloudcenter_deploy.py ./
+COPY settings.py ./
+COPY settings.yaml ./
+COPY restful.json ./
 
 
