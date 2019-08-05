@@ -32,4 +32,5 @@ COPY settings.py ./
 COPY settings.yaml ./
 COPY restful.json ./
 
-
+ENTRYPOINT [ "python", "-m" ]
+CMD ["cloudcenter_deploy"]

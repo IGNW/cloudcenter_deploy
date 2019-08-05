@@ -20,12 +20,15 @@ This scipt will deploy a Cisco Cloud Center Application Profile with your choice
     * If you update the "settings.yaml" or the "restful.json" file, you will need to rebuild the docker container.
 
 ```
-docker build . -t cloudcenter_deploy
+docker build . -t cloudcenter_container
 ```
 
-* Build a container and connect to it using the following command
+* Build a container and run the commands 
 ```
-docker run -it cloudcenter_deploy bash
+docker run cloudcenter_container                                                    # Run the app with no settings
+docker run cloudcenter_container cloudcenter_deploy                                 # Same command as above
+docker run cloudcenter_container cloudcenter_deploy show_apps                       # Run the program with the show_apps flag
+docker run cloudcenter_container cloudcenter_deploy restful.json mybuild_name       # Deploy a build into cloud center
 ```
 
 * Execute the script including the .json filename and the new deployment name.
