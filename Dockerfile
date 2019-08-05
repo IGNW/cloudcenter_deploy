@@ -28,5 +28,8 @@ RUN apk add libffi-dev openssl-dev python3-dev
 
 WORKDIR /root
 COPY cloudcenter_deploy.py ./
+COPY settings.py ./
+COPY settings.yaml ./
+COPY restful.json ./
 
 

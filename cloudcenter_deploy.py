@@ -12,15 +12,21 @@ import urllib3
 # Import settings file
 import settings
 
-# If you don't have a real SSL cert, let's disable the warnings.  If you have a real cert, comment this out.
-urllib3.disable_warnings()
 
 # Import the configuration
 config = settings.Settings()
 
 # If required settings are missing, raise an error
-if not all([config.c3_user, config.c3_apikey, config.c3_server, config.c3_port]):
-    raise Exception('\n\nPlease setup your Cloud Center specifics first.\n')
+if not all([config.c3_user, config.c3_apikey, config.c3_server]):
+    raise Exception('\n\nPlease setup your Cloud Center user, apikey, and server.\n')
+
+if not config.c3_port and config.c3_version == 5:
+    raise Exception('\n\nPlease enter a port when using Cloud Center 5')
+
+# If you don't have a real SSL cert, let's disable the warnings.
+# If you have a real cert, update settings.yaml and add 'disable_ssl_warnings: False'
+if config.disable_ssl_warnings:
+    urllib3.disable_warnings()
 
 
 def main(argv):

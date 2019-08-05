@@ -13,6 +13,7 @@ class Settings():
         self.data_url = None
         self.process_id = None
         self.deployment_name = None
+        self.disable_ssl_warnings = True
 
         try:
             with open("settings.yaml", "r") as f:
