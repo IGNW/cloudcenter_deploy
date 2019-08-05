@@ -47,12 +47,12 @@ def main(argv):
 
     if len(argv) == 3:
         myjsonfile = argv[1]
-        deployment_name = argv[2]
+        config.deployment_name = argv[2]
 
         argv.remove(argv[0])
-        argv.remove(deployment_name)
+        argv.remove(config.deployment_name)
         jsonbody = readexternalfile(myjsonfile)
-        body = updatedata(jsonbody, deployment_name)
+        body = updatedata(jsonbody, config.deployment_name)
         data_url = '{0}/jobs'.format(config.url_base_v2)
         response = open_url(data_url, "post", body)
         if type(response) is str:
