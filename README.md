@@ -31,19 +31,14 @@ docker run cloudcenter_container cloudcenter_deploy show_apps                   
 docker run cloudcenter_container cloudcenter_deploy restful.json mybuild_name       # Deploy a build into cloud center
 ```
 
-* Execute the script including the .json filename and the new deployment name.
-```
-./cloudcenter_deploy restful.json my_deployment_name
-```
-
 ### Example Run and Result
 ```
-bash-4.3# ./cloudcenter_deploy.py restful.json my_app
+Administrators-MacBook-Pro-7:cloudcenter_deploy joej$ docker run cloudcenter_container cloudcenter_deploy restful.json mybuild_name
 
-Deployment Name: my_app
-URL to deployment information (raw): https://172.22.4.62:63669/cloudcenter-ccm-backend/api/v2/jobs/298
+Deployment Name: mybuild_name
+URL to deployment information (raw): https://172.22.4.62:63669/cloudcenter-ccm-backend/api/v2/jobs/320
 
-bash-4.3# 
+Administrators-MacBook-Pro-7:cloudcenter_deploy joej$  
 ```
 
 ---
