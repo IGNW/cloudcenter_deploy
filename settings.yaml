@@ -1,0 +1,7 @@
+--- #cloudcenter_deploy settings file
+
+# The following items are required to be set
+c3_user: ""    #Example: 12345  - user id
+c3_apikey: ""  #Example: 11111111-1111-1111-1111-11111111
+c3_server: ""  #Example: 10.1.1.10  - IP or FQDN
+c3_port: ""    #Example: 63000   - TCP Port
