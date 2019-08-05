@@ -11,7 +11,6 @@ class Settings():
         self.url_base_v1 = ""
         self.url_base_v2 = ""
         self.data_url = None
-        self.process_id = None
         self.deployment_name = None
         self.disable_ssl_warnings = True
 
